@@ -71,6 +71,20 @@ use strict;
 use warnings;
 use utf8;
 
+
+
+
+
+
+
+##################################################################
+#
+#
+#
+##################################################################
+
+# vim:tabstop=4:si:expandtab:shiftwidth=4:shiftround
+
 == Comments.file description pm == map:chpm, sc:d, start, noindent ==
 #
 #===============================================================================
@@ -92,6 +106,26 @@ use utf8;
 use strict;
 use warnings;
  
+package |FILENAME|
+
+use Moose;
+use Moose::Util::TypeConstraints;
+#use Data::Dumper;
+
+use parent 'myParentOOP';
+
+has 'name'       => ( is => 'ro', isa => "Str" );
+
+
+1;
+##################################################################
+#
+#
+#
+##################################################################
+
+# vim:tabstop=4:si:expandtab:shiftwidth=4:shiftround
+
 == Comments.file description t == map:cht, sc:d, start, noindent ==
 #
 #===============================================================================
@@ -113,8 +147,24 @@ use warnings;
 use strict;
 use warnings;
 
-use Test::More tests => 1;                      # last test to print
+use Test::More ;  # tests => 1;                      # last test to print
 
+
+
+use_ok( "|FILENAME|");
+
+is($a, $expect, "description");
+
+
+
+done_testing();
+##################################################################
+#
+#
+#
+##################################################################
+
+# vim:tabstop=4:si:expandtab:shiftwidth=4:shiftround
 
 == Comments.file description pod == map:chpo, sc:d, start ==
 #
