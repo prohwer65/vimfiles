@@ -1,0 +1,15 @@
+[user]
+	name = Paul Rohwer
+	email = prohwer@mindspring.com
+[credential]
+	helper = manager
+[core]
+	editor = gvim.bat
+[alias]
+	co = checkout
+	ci = commit
+	br = branch
+	df = diff
+	st = status
+	st1 = status --short
+	lo = log --oneline

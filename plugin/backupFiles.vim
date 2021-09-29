@@ -12,12 +12,23 @@
 "set nowritebackup  "only in case you don't want a backup file while editing
 "set noswapfile     "no swap files
 
-set backup
-set backupdir=C:\Temp\vimbackup
-set backupskip=C:\Temp\vimbackup\*
-set directory=C:\Temp\vimbackup
-set writebackup
-set undodir=C:\Temp\vimbackup
+let s:MSWIN = has("win16") || has("win32")   || has("win64")    || has("win95")
+if s:MSWIN 
+                set backup
+                set backupdir=C:\Temp\vimbackup
+                set backupskip=C:\Temp\vimbackup\*
+                set directory=C:\Temp\vimbackup
+                set writebackup
+                set undodir=C:\Temp\vimbackup
+else 
+                set backup
+                set backupdir=~/tmp
+                set backupskip=~/tmp/*
+                set directory=~/tmp
+                set writebackup
+                set undodir=~/tmp
+endif
+
 
 " Make those folders automatically if they don't already exist.
 if !isdirectory(expand(&undodir))
@@ -31,3 +42,4 @@ if !isdirectory(expand(&directory))
 endif
 
 
+" vim: tabstop=2 shiftwidth=2 foldmethod=marker expandtab

@@ -1,0 +1,20 @@
+
+
+
+,,	hash pointer  '=>'
+
+= <TAB>	align equal signs nearby
+
+zz 	Toggle Fold Around Search
+
+yankmatches.vim:
+dm	Delete matching lines
+DM	Delete all but matching lines
+ym	Yank matching lines
+YM	Yank all by matching lines
+
+
+trackperlvars.vim:
+gd    	goto defintion
+cv	Change Variable, all instances
+
