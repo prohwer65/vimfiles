@@ -114,12 +114,12 @@ let s:match_id = 664668
 let s:displaying_message = 0
 
 " Set up initial highlight groups (unless already set)...
-highlight default      TRACK_PERL_VAR             ctermfg=white                cterm=bold   gui=NONE guifg=#000000 guibg=#ffffff
-highlight default      TRACK_PERL_VAR_QUESTION    ctermfg=white                cterm=bold   gui=NONE guifg=#000000 guibg=#ffffff
-highlight default      TRACK_PERL_VAR_LOCKED      ctermfg=cyan   ctermbg=blue  cterm=bold   gui=NONE guifg=#000000 guibg=#ffffff
-highlight default      TRACK_PERL_VAR_UNDECLARED  ctermfg=red                  cterm=bold   gui=NONE guifg=#000000 guibg=#ffffff
-highlight default      TRACK_PERL_VAR_UNUSED      ctermfg=cyan                 cterm=bold   gui=NONE guifg=#000000 guibg=#ffffff
-highlight default      TRACK_PERL_VAR_BUILTIN     ctermfg=magenta              cterm=bold   gui=NONE guifg=#000000 guibg=#ffffff
+highlight default      TRACK_PERL_VAR             ctermfg=white                cterm=bold   gui=underline guifg=red guibg=#ffffff
+highlight default      TRACK_PERL_VAR_QUESTION    ctermfg=white                cterm=bold   gui=underline guifg=red guibg=#ffffff
+highlight default      TRACK_PERL_VAR_LOCKED      ctermfg=cyan   ctermbg=blue  cterm=bold   gui=underline guifg=red guibg=#ffffff
+highlight default      TRACK_PERL_VAR_UNDECLARED  ctermfg=red                  cterm=bold   gui=underline guifg=red guibg=#ffffff
+highlight default      TRACK_PERL_VAR_UNUSED      ctermfg=cyan                 cterm=bold   gui=underline guifg=red guibg=#ffffff
+highlight default      TRACK_PERL_VAR_BUILTIN     ctermfg=magenta              cterm=bold   gui=underline guifg=red guibg=#ffffff
 highlight default link TRACK_PERL_VAR_ACTIVE      TRACK_PERL_VAR
 
 let s:PUNCT_VAR_DESC = {
