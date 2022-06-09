@@ -11,6 +11,8 @@
 "
 " 
 let s:MSWIN = has("win16") || has("win32")   || has("win64")    || has("win95")
+let s:UNIX  = has("unix")  || has("macunix") || has("win32unix")
+"
 if s:MSWIN 
     let @V = ':TOhtmlggVG"*y:q!:!start /min powershell -noprofile "gcb | scb -as"'
 endif
