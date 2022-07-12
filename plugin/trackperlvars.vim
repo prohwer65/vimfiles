@@ -44,10 +44,10 @@ function! TPV__setup ()
     " Only in small Perl files...
     if &filetype == 'perl' || expand("%:e") =~ '^\%(\.p[lm]\|\.t\)$'
 
-        " Tracking can be locked by setting this variable
-        if !exists('b:track_perl_var_locked')
-            let b:track_perl_var_locked = 0
-        endif
+    " Tracking can be locked by setting this variable
+    if !exists('b:track_perl_var_locked')
+        let b:track_perl_var_locked = 0
+    endif
 
         " Set up autocommands...
         augroup TrackVarBuffer
@@ -81,7 +81,7 @@ function! TPV__setup ()
         if b:track_perl_var_locked
             highlight! link TRACK_PERL_VAR_ACTIVE  TRACK_PERL_VAR_LOCKED
             try
-                call matchadd('TRACK_PERL_VAR_ACTIVE', b:track_perl_var_locked_pat, 1000, s:match_id)
+                call matchadd('TRACK_PERL_VAR_ACTIVE', b:track_perl_var_locked_pat, 1000, TPV_match_id)
             catch /./
             endtry
         endif
@@ -93,7 +93,7 @@ endfunction
 function! TPV__teardown ()
     " Remove any active highlighting...
     try
-        call matchdelete(s:match_id)
+        call matchdelete(TPV_match_id)
     catch /./
     endtry
 
@@ -108,7 +108,7 @@ let s:prev_sigil   = ""
 let s:prev_varname = ""
 
 " Select an unlikely match number (e.g. the Neighbours of the Beast)...
-let s:match_id = 664668
+let TPV_match_id = 664668
 
 " This tracks whether plugin is displaying a message...
 let s:displaying_message = 0
@@ -389,7 +389,7 @@ function! TPV_track_perl_var ()
     endif
 
     " Remove previous highlighting...
-    try | call matchdelete(s:match_id) | catch /./ | endtry
+    try | call matchdelete(TPV_match_id) | catch /./ | endtry
 
     " Locate a var under cursor...
     let cursline = getline('.')
@@ -509,7 +509,7 @@ function! TPV_track_perl_var ()
     " Set up the match for variables...
     let b:track_perl_var_locked_pat = curs_var.'\%(\_$\|\W\@=\)'
     try
-        call matchadd('TRACK_PERL_VAR_ACTIVE', b:track_perl_var_locked_pat, 1000, s:match_id)
+        call matchadd('TRACK_PERL_VAR_ACTIVE', b:track_perl_var_locked_pat, 1000, TPV_match_id)
     catch /./
     endtry
 
