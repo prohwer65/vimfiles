@@ -26,7 +26,7 @@
 #-------------------------------------------------------------------------------
 == Comments.function == map:cfu, sc:f  ==
 #===  FUNCTION  ================================================================
-#         NAME: |?FUNCTION_NAME|
+#{{{1     NAME: |?FUNCTION_NAME|
 #      PURPOSE: <CURSOR>
 #   PARAMETERS: ????
 #      RETURNS: ????
@@ -37,7 +37,7 @@
 #===============================================================================
 == Comments.method == map:cme, sc:m  ==
 #===  CLASS METHOD  ============================================================
-#        CLASS: |?CLASSNAME|
+#{{{1    CLASS: |?CLASSNAME|
 #       METHOD: |?METHODNAME|
 #   PARAMETERS: ????
 #      RETURNS: ????
@@ -83,7 +83,8 @@ use utf8;
 #
 ##################################################################
 
-# vim:tabstop=4:si:expandtab:shiftwidth=4:shiftround
+# }}}1
+# vim:tabstop=4:si:expandtab:shiftwidth=4:shiftround:set foldenable foldmethod=marker:
 
 == Comments.file description pm == map:chpm, sc:d, start, noindent ==
 #
@@ -124,7 +125,8 @@ has 'name'       => ( is => 'ro', isa => "Str" );
 #
 ##################################################################
 
-# vim:tabstop=4:si:expandtab:shiftwidth=4:shiftround
+# }}}1
+# vim:tabstop=4:si:expandtab:shiftwidth=4:shiftround:set foldenable foldmethod=marker:
 
 == Comments.file description t == map:cht, sc:d, start, noindent ==
 #
@@ -164,7 +166,8 @@ done_testing();
 #
 ##################################################################
 
-# vim:tabstop=4:si:expandtab:shiftwidth=4:shiftround
+# }}}1
+# vim:tabstop=4:si:expandtab:shiftwidth=4:shiftround:set foldenable foldmethod=marker:
 
 == Comments.file description pod == map:chpo, sc:d, start ==
 #

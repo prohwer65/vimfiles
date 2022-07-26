@@ -7,11 +7,17 @@ syntax on
 
 " =================  Search setup  ============
 set columns=9999
-set lines=9999
+set lines=113
 
 " =================  Search setup  ============
 set hlsearch     "Turn highligh search
 set incsearch    "Turn on Incremental search
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set textwidth=140
+
 
 
 " =============== INDENTING ===================
