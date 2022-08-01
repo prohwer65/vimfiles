@@ -8,6 +8,8 @@ syntax on
 " =================  Search setup  ============
 set columns=9999
 set lines=113
+set scrolloff=8
+set relativenumber
 
 " =================  Search setup  ============
 set hlsearch     "Turn highligh search

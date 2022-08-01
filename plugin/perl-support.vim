@@ -101,7 +101,7 @@ endfunction   " ---------- end of function  s:GetGlobalSetting  ----------
 " - characters that must be escaped for filenames
 "
 let s:MSWIN = has("win16") || has("win32")   || has("win64")    || has("win95")
-let s:UNIX	= has("unix")  || has("macunix") || has("win32unix")
+let s:UNIX  = has("unix")  || has("macunix") || has("win32unix")
 "
 let s:Perl_Executable         = ''                     " the Perl interpreter used
 let s:Perl_Perl_is_executable = 0                      " the Perl interpreter used
