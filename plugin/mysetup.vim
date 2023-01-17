@@ -32,3 +32,11 @@ vmap <C-c> "+yi
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
+
+
+
+
+
+" =============== Plugin manager ===================
+   call plug#begin('~/.vim/plugged')
+   Plug 'rust-lang/rust.vim'
