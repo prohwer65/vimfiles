@@ -1,0 +1,4 @@
+*.*~ 
+*.ignore 
+.netrwhist
+bundle/Vundle.vim
