@@ -14,10 +14,12 @@ cp .gitconfig .gitignore  ~/
 
 # Windows
 
-cd
+cd %USERPROFILE%
 
 git clone https://github.com/prohwer65/vimfiles.git .vimfiles 
 
 cd .vimfiles 
 
-copy .gitconfig .gitignore  ..
+copy .gitconfig %USERPROFILE%
+
+copy .gitignore %USERPROFILE%
