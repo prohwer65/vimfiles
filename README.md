@@ -3,10 +3,21 @@
 # https://github.com/prohwer65/vimfiles.git
 # 
 
+# Linux
 cd
-git clone https://github.com/prohwer65/vimfiles.git .vim  (or .vimfiles for Windows)
 
+git clone https://github.com/prohwer65/vimfiles.git .vim  
 
-cd .vim  ( or .vimfiles for Windows)
+cd .vim  
 
 cp .gitconfig .gitignore  ~/
+
+# Windows
+
+cd
+
+git clone https://github.com/prohwer65/vimfiles.git .vimfiles 
+
+cd .vimfiles 
+
+copy .gitconfig .gitignore  ..
