@@ -3,7 +3,11 @@
 	email = prohwer65@gmail.com
 [credential]
 	helper = manager
+	helper = /usr/local/bin/git-credential-manager
+	credentialStore = /home/prohwer/.netrc
 [core]
+	editor =  ~/.cargo/bin/neovide --no-fork
+    editor = /usr/bin/gvim  --no-fork
 	editor = gvim.bat
 [alias]
 	co = checkout
@@ -13,3 +17,30 @@
 	st = status
 	st1 = status --short
 	lo = log --oneline
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[github]
+    #user_login = prohwer65@gmail.com
+    #user_token = 
+    #verify_ssl = True
+    #clr_primary = None
+    #clr_secondary = green
+    #clr_tertiary = cyan
+    #clr_quaternary = yellow
+    #clr_bold = cyan
+    #clr_code = cyan
+    #clr_error = red
+    #clr_header = yellow
+    #clr_link = green
+    #clr_list = cyan
+    #clr_message = None
+    #clr_num_comments = green
+    #clr_num_points = green
+    #clr_tag = cyan
+    #clr_time = yellow
+    #clr_title = None
+    #clr_tooltip = None
+    #clr_user = cyan
+    #clr_view_link = magenta
+    #clr_view_index = magenta
+

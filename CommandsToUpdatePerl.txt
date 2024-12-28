@@ -1,0 +1,4 @@
+perl -MCPAN -e shell
+install Tk
+install Data::Compare
+
