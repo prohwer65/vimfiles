@@ -6,8 +6,8 @@ filetype plugin indent on
 syntax on 
 
 " =================  Search setup  ============
-set columns=9999
-set lines=113
+set columns=168
+set lines=46
 set scrolloff=8
 set relativenumber
 
