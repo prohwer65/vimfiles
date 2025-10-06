@@ -16,9 +16,9 @@ cp .gitconfig .gitignore  ~/
 
 cd %USERPROFILE%
 
-git clone https://github.com/prohwer65/vimfiles.git .vimfiles 
+git clone https://github.com/prohwer65/vimfiles.git vimfiles 
 
-cd .vimfiles 
+cd vimfiles 
 
 copy .gitconfig %USERPROFILE%
 

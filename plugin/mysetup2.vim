@@ -35,6 +35,8 @@ imap <C-v> <ESC>"+pa
 
 
 
+" =============== Plugin manager ===================
+autocmd BufNewFile,BufRead *.fio                     setf dosini
 
 
 " =============== Plugin manager ===================
