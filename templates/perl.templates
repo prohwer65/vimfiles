@@ -11,9 +11,9 @@
 
 SetMacro( 'AUTHOR',       'Paul Rohwer' )
 SetMacro( 'AUTHORREF',    'PWR' )
-SetMacro( 'EMAIL',        'prohwer@mindspring.com' )
+SetMacro( 'EMAIL',        'prohwer65@gmail.com' )
 SetMacro( 'ORGANIZATION', 'PowerAudio' )
-SetMacro( 'COMPANY',      'PowerAudio' )
+SetMacro( 'COMPANY',      'ATP Inc' )
 SetMacro( 'COPYRIGHT',    'Copyright (c) |YEAR|, |AUTHOR|' )
 SetMacro( 'LICENSE',      'GNU General Public License' )
 
