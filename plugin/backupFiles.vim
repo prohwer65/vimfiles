@@ -22,11 +22,11 @@ if s:MSWIN
                 set undodir=C:\Temp\vimbackup
 else 
                 set backup
-                set backupdir=~/tmp
-                set backupskip=~/tmp/*
-                set directory=~/tmp
+                set backupdir=~/tmp/vimbackup
+                set backupskip=~/tmp/vimbackup/*
+                set directory=~/tmp/vimbackup
                 set writebackup
-                set undodir=~/tmp
+                set undodir=~/tmp/vimbackup
 endif
 
 
