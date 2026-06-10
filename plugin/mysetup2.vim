@@ -42,3 +42,7 @@ autocmd BufNewFile,BufRead *.fio                     setf dosini
 " =============== Plugin manager ===================
    call plug#begin('~/.vim/plugged')
    Plug 'rust-lang/rust.vim'
+
+if &diff
+    colorscheme zellner  " 'delek', 'morning', and 'zellner' are known for good diff contrast
+endif
