@@ -10,6 +10,7 @@ set columns=168
 set lines=46
 set scrolloff=8
 set relativenumber
+set number
 
 " =================  Search setup  ============
 set hlsearch     "Turn highligh search
