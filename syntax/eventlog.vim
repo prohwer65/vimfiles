@@ -9,7 +9,9 @@ if version < 600
 elseif exists("b:current_syntax")
 	finish
 endif
-
+setlocal foldenable
+set foldmethod=expr
+set foldexpr=getline(v:lnum)==#getline(v:lnum+1)?1:0
 "-------------------------------------------------------------------------------
 " Syntax
 "-------------------------------------------------------------------------------
