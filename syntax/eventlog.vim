@@ -9,6 +9,11 @@ if version < 600
 elseif exists("b:current_syntax")
 	finish
 endif
+
+
+"-------------------------------------------------------------------------------
+" Fold redundant lines.   
+"-------------------------------------------------------------------------------
 setlocal foldenable
 set foldmethod=expr
 set foldexpr=getline(v:lnum)==#getline(v:lnum+1)?1:0
@@ -17,14 +22,16 @@ set foldexpr=getline(v:lnum)==#getline(v:lnum+1)?1:0
 "-------------------------------------------------------------------------------
 
 " comment
+syn match Underlined       "error.*\c"
+syn match Underlined       "\<Start.*\c"
+syn match Underlined       "\<End.*\c"
+syn match TypeDef          "debug.*\c"
 syn match Error        "ERROR.*\c"
 "syn match Error         "VDT.*\c"
 syn match Error         "MCU temp.*\c"
 syn match Comment       "Thermal.PS.*\c"
 syn match Float          "[0-9]* ms"
 syn match Label          "[Rr]eset\c"
-syn match TypeDef          "debug.*\c"
-syn match Underlined       "error.*\c"
 
 syn match Error "Firmware hangs up\c"
 syn match Error "WHILE Error ID\c"
@@ -42,7 +49,8 @@ syn match Error "MarkBadBlock().*\c"
 syn match Error "Over temperature\c"
 syn match Error "Read ECC Fail\c"
 syn match Error "Fail\c"
-syn match Error "ECC\c"
+syn match Underlined "ECC"
+syn match Underlined "Ecc"
 syn match Error "Program Fail\c"
 syn match Error "Erase Fail\c"
 syn match Error "ATA_SRST\c"
@@ -50,27 +58,29 @@ syn match Error "HW_SRST\c"
 syn match Error "SATA_FatalError\c"
 syn match Error "SATA_TX_Error"
 syn match Error "SATA_RX_Error"
-syn match Error "SATA_Link_Up"
+syn match Comment "SATA_Link_Up"
 syn match Error "SATA_Link_lose"
 syn match Error "SATA_COMRESET"
 syn match Error "SATA_INFS"
 syn match Error "SATA_LSCS"
-syn match Error "SataErrHandle() LBA"
-syn match Error "SataErrHandle() 1"
+syn match Error "SataErrHandle()"
 syn match Comment "Temperature:"
 "syn match Label "retry\c"
 "syn match Label "readretry\c"
 syn match Label "read\_s*retry\c"
 syn match Error "g16CmdErrorFlag"
-syn match Error "HandleInFlushDram done"
-syn match Error "HandleInFlushDram() End, Hang"
+syn match ColorColumn "HandleInFlushDram.*"
+"syn match Error "HandleInFlushDram() End, Hang"
+syn match Error "Hang"
 syn match Function "FlushCache().*\c"
-syn match Error "SYS_VDT40_Powerdown()"
-syn match Error "SYS_VDT27_Powerdown()"
-syn match Error "SYS_VDT18_Powerdown()"
+"syn match Error "SYS_VDT40_Powerdown()"
+"syn match ColorColumn ".*VDT40.*"
+"syn match Error "SYS_VDT27_Powerdown()"
+syn match ColorColumn ".*VDT.*"
+"syn match Error "SYS_VDT18_Powerdown()"
 syn match Error "gThrottlingStage"
 syn match Error "Capacitor unfull"
-syn match Error "PowerCycle Count"
+syn match Error "PowerCycle.*"
 
 set nowrap
 
